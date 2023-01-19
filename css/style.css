@@ -1,0 +1,62 @@
+/* Colors */
+/* title color text  #000000; */
+/* color text   rgba(0, 0, 0, 0.8);*/
+/* background color  #FFFFFF;*/
+/* accent color  #18A0FB;*/
+/* secondary background color #F5F5F5; */
+
+body {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #ffffff;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.button {
+  display: inline-block;
+  text-align: center;
+  padding: 11px;
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  width: 130px;
+}
+.button.white {
+  color: #18a0fb;
+  background-color: #ffffff;
+  border: 1px solid #18a0fb;
+}
+.button.accent {
+  color: #ffffff;
+  background-color: #18a0fb;
+  border: 1px solid transparent;
+}
+.header-link.active {
+  color: #000000;
+}
+.logo {
+  color: #000000;
+}
+.hero-title {
+  color: #000000;
+}
+.header-link {
+  color: #18a0fb;
+}
+.header-link:hover,
+.header-link:focus {
+  color: rgba(0, 0, 0, 0.8);
+}
+.section-title {
+  color: #000000;
+}
+.feature-list .title {
+  color: #000000;
+}
+.feature-list .link {
+  color: #18a0fb;
+}
