@@ -53,7 +53,6 @@ a {
   width: 1440px;
   padding-left: 20px;
   padding-right: 20px;
-  outline: 2px solid rgb(202, 9, 9);
 }
 
 .position {
@@ -77,10 +76,14 @@ a {
   color: var(--title-color-text);
 }
 .hero {
+  background-color: rgb(159, 158, 158);
   text-align: center;
 }
 button {
   cursor: pointer;
+}
+.wrap {
+  padding: 300px 144px 150px 144px;
 }
 .hero-title {
   margin-top: 0;
@@ -90,6 +93,7 @@ button {
   font-size: 56px;
   color: var(--title-color-text);
 }
+
 .header-list {
   display: flex;
   margin-left: 70px;
