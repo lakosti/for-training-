@@ -5,58 +5,271 @@
 /* accent color  #18A0FB;*/
 /* secondary background color #F5F5F5; */
 
+/* ctr + shift + o = search */
+
+:root {
+  --title-color-text: #000000;
+  --color-text: rgba(0, 0, 0, 0.8);
+  --accent-color: #18a0fb;
+  --background-color: #ffffff;
+}
 body {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  letter-spacing: -0.015em;
   color: rgba(0, 0, 0, 0.8);
-  background-color: #ffffff;
+  background-color: var(--background-color);
 }
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 a {
   text-decoration: none;
 }
+
+/* the button needs both min-width and padding properties also needs border with transtarent */
+
 .button {
   display: inline-block;
-  text-align: center;
-  padding: 11px;
+  padding: 11px 34px;
   border-radius: 6px;
+  border: 1px solid transparent;
   font-size: 15px;
   line-height: 1.2;
-  letter-spacing: -0.015em;
-  width: 130px;
+  min-width: 130px;
+  text-align: center;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 2px solid rgb(202, 9, 9);
+}
+
+.position {
+  text-align: center;
 }
 .button.white {
-  color: #18a0fb;
-  background-color: #ffffff;
-  border: 1px solid #18a0fb;
+  color: var(--accent-color);
+  background-color: var(--background-color);
+  border-color: var(--accent-color);
 }
 .button.accent {
   color: #ffffff;
-  background-color: #18a0fb;
-  border: 1px solid transparent;
+  background-color: var(--accent-color);
 }
 .header-link.active {
-  color: #000000;
+  color: var(--title-color-text);
 }
 .logo {
-  color: #000000;
+  font-family: Comfortaa;
+  font-size: 28px;
+  color: var(--title-color-text);
+}
+.hero {
+  text-align: center;
+}
+button {
+  cursor: pointer;
 }
 .hero-title {
-  color: #000000;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 1.43;
+  font-size: 56px;
+  color: var(--title-color-text);
+}
+.header-list {
+  display: flex;
+  margin-left: 70px;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+.auth-item + .auth-item {
+  margin-left: 12px;
+}
+/* .header-item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+/* у первого нет соседа и к нему марджин не применитьтся, дословно: примени свойство к соседу соседа (У ПЕРВОГО НЕТ СОСЕДА) */
+.header-item + .header-item {
+  margin-left: 40px;
+}
+/* у инлайн и инлайн блочных елементов есть зазор в 4 пикселя, поэтому лучше задавать блок */
+.header-link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+.section-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5;
+}
+.features-title {
+  margin-bottom: 60px;
+}
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -40px -75px;
+}
+.features-item {
+  width: 625px;
+  margin: 40px 75px;
+}
+.title {
+  font-size: 24px;
+  line-height: 1.5;
+}
+.after-title {
+  margin-bottom: 24px;
 }
 .header-link {
-  color: #18a0fb;
+  color: var(--accent-color);
 }
 .header-link:hover,
 .header-link:focus {
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text);
 }
 .section-title {
-  color: #000000;
+  color: var(--title-color-text);
 }
 .feature-list .title {
-  color: #000000;
+  color: var(--title-color-text);
 }
 .feature-list .link {
-  color: #18a0fb;
+  color: var(--accent-color);
 }
+.feature-list p {
+  margin-bottom: 32px;
+}
+.section-position {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.background {
+  background-color: #f5f5f5;
+}
+.section-join-text,
+.section-example-text {
+  font-size: 36px;
+  line-height: 1.39;
+}
+.section-example-text {
+  margin-bottom: 80px;
+}
+
+/* ------------------------------------Секція з реверсом------------------ */
+
+.item-hidden {
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.item-hidden:nth-child(2n) {
+  background-color: #f5f5f5;
+  flex-direction: row-reverse;
+}
+/* тобто знайти нечотні серед ітем хіден, и примінити стилі до класу контент, тобто через батька до дитини задаємо */
+
+.item-hidden:nth-child(2n + 1) .content {
+  margin-left: 84px;
+}
+.item-hidden:nth-child(2n) .content {
+  margin-right: 84px;
+}
+.margin {
+  margin-bottom: 30px;
+}
+/* -----------------------------------Clients list----------------------- */
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1020px;
+  margin: -30px 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clients-list li {
+  margin: 30px 40px;
+}
+/* ----------------------------Join------------------------------------------ */
+.section-join-text {
+  width: 943px;
+}
+.join {
+  display: flex;
+}
+.join-button {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.right {
+  margin-right: 45px;
+}
+/* --------------------------------CARD-SET-------------------------------------------- */
+
+.flex-container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: greenyellow;
+  margin: -15px;
+}
+
+/* МИНУСОВЫЙ МАРДЖИН ---- даем детям со свех сторон половину марджина, а родителю даем такой самый, но отрицательный, при этом задаем фиксированую ширину, не калк, но при этом некорректно работает фон */
+
+.flex-item {
+  width: 380px;
+  margin: 15px;
+  /* width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px; */
+}
+
+/* вибирає кожен третій */
+
+/* .flex-item:nth-child(3n) {
+  margin-right: 0;
+} */
+
+/* вибирає останні три */
+
+/* .flex-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+} */
+
+/* или можно дать всем, кроме тех, что прописаны в скобках и записать одним селектором */
+
+/* .flex-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.flex-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+} */

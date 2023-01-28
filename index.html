@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
       <header class="header">
-        <nav class="site-nav">
+        <nav class="site-nav container">
           <a href="./index.html" class="logo"><img src="./img/logo.png" alt="" />photo</a>
           <ul class="header-list">
             <li class="header-item">
@@ -24,207 +34,141 @@
             </li>
           </ul>
           <ul class="auth-nav">
-            <li><a href="" class="button white">Log in</a></li>
-            <li><a href="" class="button accent">Register</a></li>
+            <li class="auth-item"><a href="" class="button white">Log in</a></li>
+            <li class="auth-item"><a href="" class="button accent">Register</a></li>
           </ul>
         </nav>
       </header>
       <div>
         <section class="hero">
-          <h1 class="hero-title">The largest community of photo enthusiasts</h1>
-          <a href="">Join today</a>
+          <div class="container">
+            <h1 class="hero-title">The largest community of photo enthusiasts</h1>
+            <a href="" class="button accent">Join today</a>
+          </div>
         </section>
       </div>
-      <section class="section">
-        <h2 class="section-title">
-          Snap photos and share like <br />
-          never before
-        </h2>
-        <ul class="feature-list">
-          <li>
-            <h3 class="title">Sed ut perspiciatis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-              quisquam est.
-            </p>
-            <a href="" class="link">Learn more</a>
-          </li>
-          <li>
-            <h3 class="title">Lorem ipsum dolor</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-              quisquam est.
-            </p>
-            <a href="" class="link">Learn more</a>
-          </li>
-          <li>
-            <h3 class="title">Nemo enim ipsam</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-              quisquam est.
-            </p>
-            <a href="" class="link">Learn more</a>
-          </li>
-          <li>
-            <h3 class="title">Tempor incididunt</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-              quisquam est.
-            </p>
-            <a href="" class="link">Learn more</a>
-          </li>
-        </ul>
-      </section>
-      <section class="section">
-        <h2 class="section-title">Lorem, ipsum dolor sit</h2>
-        <ul>
-          <li>
-            <img src="./img/black-bg.jpg" alt="" width="750" />
-            <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-              quisquam est, qui dolorem.
-            </p>
-          </li>
-          <li>
-            <img src="./img/grey-bg.jpg" alt="" width="750" />
-            <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-              quisquam est, qui dolorem.
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2 class="secyion-title">You’re in good company</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore
-        </p>
-        <ul>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-          <li>
-            <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore
-        </p>
-        <div>
-          <a href="">Join Today</a>
-          <a href="">Contact us</a>
+      <section class="section section-card section-position">
+        <div class="container">
+          <h2 class="section-title features-title">
+            Snap photos and share like <br />
+            never before
+          </h2>
+          <ul class="feature-list">
+            <li class="features-item">
+              <h3 class="title after-title">Sed ut perspiciatis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                quisquam est.
+              </p>
+              <a href="" class="link button white">Learn more</a>
+            </li>
+            <li class="features-item">
+              <h3 class="title after-title">Lorem ipsum dolor</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                quisquam est.
+              </p>
+              <a href="" class="link button white">Learn more</a>
+            </li>
+            <li class="features-item">
+              <h3 class="title after-title">Nemo enim ipsam</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                quisquam est.
+              </p>
+              <a href="" class="link button white">Learn more</a>
+            </li>
+            <li class="features-item">
+              <h3 class="title after-title">Tempor incididunt</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                quisquam est.
+              </p>
+              <a href="" class="link button white">Learn more</a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="section">
-        <h2 class="section-title">Snap photos and share like never before</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore
-        </p>
-        <ul>
-          <li>
-            <h3 class="title">Sed ut perspiciatis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-          </li>
-          <li>
-            <h3 class="title">Lorem ipsum dolor</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-          </li>
-          <li>
-            <h3 class="title">Nemo enim ipsam</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-          </li>
-        </ul>
-        <img src="./img/grey-bg.jpg" alt="" width="750" />
+        <div class="container">
+          <h2 class="section-title" hidden>Lorem, ipsum dolor sit</h2>
+          <ul>
+            <li class="item-hidden">
+              <img src="./img/black-bg.jpg" alt="" width="750" />
+              <div class="content">
+                <h3 class="title after-title">Sed ut perspiciatis unde omnis</h3>
+                <p class="section-works-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                  quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                  porro quisquam est, qui dolorem.
+                </p>
+              </div>
+            </li>
+            <li class="item-hidden">
+              <img src="./img/grey-bg.jpg" alt="" width="750" />
+              <div class="content">
+                <h3 class="title after-title">Sed ut perspiciatis unde omnis</h3>
+                <p class="section-works-text">
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                  quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                  porro quisquam est, qui dolorem.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section class="section">
-        <h2 class="section-title">Snap photos and share like never before</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore
-        </p>
-        <ul>
-          <li>
-            <img src="./img/Rectangle.jpg" alt="" width="684" height="400" />
-            <h3 class="title">Sed ut perspiciatis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur.
-            </p>
-          </li>
-          <li>
-            <img src="./img/Rectangle.jpg" alt="" width="684" height="400" />
-            <h3 class="title">Lorem ipsum dolor</h3>
-            <p>
-              Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section class="section">
-        <h2 class="section-title">You’re in good company</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore
-        </p>
-        <ul>
-          <li><img src="./img/Rectangle.svg" alt="" width="173" height="73" /></li>
-          <li><img src="./img/Rectangle.svg" alt="" width="173" height="73" /></li>
-          <li><img src="./img/Rectangle.svg" alt="" width="173" height="73" /></li>
-          <li><img src="./img/Rectangle.svg" alt="" width="173" height="73" /></li>
-          <li><img src="./img/Rectangle.svg" alt="" width="173" height="73" /></li>
-          <li><img src="./img/Rectangle.svg" alt="" width="173" height="73" /></li>
-        </ul>
-        <article>
-          <img src="./img/new.jpg" alt="" width="684" height="400" />
-          <h3 class="title">Sed ut perspiciatis unde omnis</h3>
-          <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-            quisquam est, qui dolorem ipsum quia dolor sit amet.
+
+      <section class="section-example section-position">
+        <div class="container">
+          <h2 class="section-title margin position">You’re in good company</h2>
+          <p class="section-example-text position">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore
           </p>
-        </article>
+          <ul class="clients-list">
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./img/Rectangle.svg" alt="cube" /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-join section-position background">
+        <div class="container join">
+          <p class="section-join-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore
+          </p>
+          <div class="join-button">
+            <a href="" class="button accent right">Join Today</a>
+            <a href="" class="button white">Contact us</a>
+          </div>
+        </div>
       </section>
       <footer>
         <ul>
@@ -246,6 +190,58 @@
         </ul>
         <p>&copy; Photo, Inc. 2019. We love our users!</p>
       </footer>
+
+      <!-- -------------------------------Card-set-------------------------- -->
+
+      <!-- <div class="flex-container">
+        <ul class="flex">
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+          <li class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium amet, quam et ut
+            incidunt neque beatae quod fugit ipsa repellat quidem, natus nostrum vero dolores
+            voluptas perferendis iste ea tenetur?
+          </li>
+        </ul>
+      </div> -->
     </main>
   </body>
 </html>
