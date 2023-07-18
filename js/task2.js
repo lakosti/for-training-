@@ -1,5 +1,8 @@
-//ЗАНЯТТЯ 1.1
-function checkIfCanAccessContent(subType) {
-  const canAccessContent = 'pro' || 'vip'; // Change this line
-  return canAccessContent;
-}
+//ЗАНЯТТЯ 2
+// && - останнє тру або перше фолс
+// || - перше тру або останній фолс
+
+console.log(null && 'false' && 'Mango'); //
+console.log(null || 'false' || 'Mango'); //
+console.log('false' && 'Mango' && 'null'); //
+console.log(('Mango' && null) || 'Mango'); //
