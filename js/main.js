@@ -15,9 +15,9 @@
 
 ///////////////////////////////////////////////////////////////// ЛОГІЧНІ ОПЕРАТОРИ
 
-// && оператор і ---- вимагає з права і з ліва тру значення, якщо буде фолс то поверне його значення ----ПОВЕРТАЄ ПЕРШИЙ ФОЛС АБО ОСТАННІЙ ТРУ (працює на 6 значень які повертають фолс)
-// || --- повертає перше значення true або останній false (працює на 6 значень які повертають фолс)
-// оператор нульового злиття ??  працює на 2 значення null undefined
+// && ---- оператор вимагає з права і з ліва тру значення, якщо буде фолс то поверне його значення ----ПОВЕРТАЄ ПЕРШИЙ ФОЛС АБО ОСТАННІЙ ТРУ (працює на 6 значень які повертають фолс)
+// || ---  повертає перше true або останній false (працює на 6 значень які повертають фолс)
+// ?? ---- оператор нульового злиття ??  працює на 2 значення null undefined
 
 // /////////////////////////////////////FALTHY ЗНАЧЕННЯ ------------
 
@@ -26,7 +26,7 @@
 // underfined --- false
 // false --- false
 // NaN ---- false
-// "" --- false (empty string)
+// "" --- false (empty string) якщо є пробіл ' ' то це вже тру
 // false --- false
 //console.log(Boolean(-1)); ===> console.log(!!-1); --- аналог буліна !! //result true
 
@@ -80,10 +80,46 @@
 // console.log(Math.floor(value));
 
 // round -- just round
-
 // const value = 28.5; //29
 // console.log(Math.round(value));
 
+// Number('25.7px'); // NaN
+// Number.parseInt('25.7px'); // 25
+// Number.parseFloat('25.7px'); //25.7
+
+// const str = '153.35tr';
+// console.log(Number.parseInt(str)); //153
+
+// const str = '256.88tt';
+// const num = Number(str);
+// console.log(num); // NaN метод намбер очікує на число, якщо було б '25' то намбер перевів би рядок в число 25
+// console.log(Number.parseInt(str)); // 256 у такому випадку Number.parseInt виводить по можливості ЦІЛЕ число
+// console.log(isNaN(num)); // глобальний метод виконує приведення типів під капотом/ уже застарілий
+// console.log(Number.isNaN(num)); // метод класу намбер ВИКОРИСТОВУЄТЬСЯ В ОСНОВНОМУ ЦЕЙ МЕТОД, бо перший працює не зовсім коректно
+
+// console.log(isNaN(undefined)); // true відбувається приведення типів 'ЦЕ НЕ ЧИСЛО?' --  TRUE
+// console.log(Number.isNaN(undefined)); // false не відбувається приведення типів
+
+//
+// const num = '25.655dfp';
+// console.log(typeof num); // string
+// console.log(Number.isNaN(num)); //false
+// console.log(isNaN(num)); //true
+
+// const mango = 'mango';
+// console.log(mango.indexOf('nam')); // -1 -- немає такого значення
+// console.log(mango.indexOf('m')); // 0
+// console.log(mango.indexOf('a')); // 1
+// console.log(mango.indexOf('n')); // 2
+// console.log(mango.indexOf('0')); // 4
+
+// alert('hi');
+
+// const message = prompt('Message');
+// console.log(message); //null
+
+// const result = confirm('Are you happy?');
+// console.log(result); // false/true
 // -------------------------------------------------------------------------------------КОНКАТЕНАЦІЯ (ЛИШЕ + )-----------------------------------------------------
 
 // const name = 'Artem';
@@ -148,15 +184,25 @@
 
 // console.log(false === 'false'); //false
 
+// console.log('a' < 'aAbBc'); // true перевага віддається тій строці яка більша
+
+// console.log('false' == 0); // false оскільки фолс стокою = тру = 1
+
+// console.log('0' == false); //true
+
+// console.log(26 >= 26); //true оскільки спрацювує два оператора = і >
+
+// console.log('1' != 1); //false  оскільки 1  = 1
+
+// console.log('1' !== 1); // true оскільки 1 не дорівн 1
+
 // console.log(1 == true); //true
 
 // console.log(1 === true); //false
 
-// console.log('0' == false); //true
-
 // console.log('0' === false); //false
 
-// console.log('Papaya' < 'papaya'); //true (P - 50, p - 70) --- отже якщо рядоки то порівнюємо по юнікоду
+// console.log('Papaya' < 'papaya'); //true (P - 50, p - 70) --- отже якщо рядоки то порівнюємо по юнікоду //// 'p'.charCodeAt(0) --- в браузері в консолі порівнюємо
 
 // console.log('Papaya' === 'papaya'); //false
 
@@ -193,6 +239,44 @@
 
 // console.log(null || (2 && 3) || 4); // 3
 
+// console.log(2 || 0 || 1); // 2 метод короткого замикання якщо знаходить відповідь то далі не рухається
+
+// console.log(0 ?? 1); //0 те що перше бачит і повертає
+
+// console.log(5 ?? 10); //5
+
+// console.log(null ?? 1); // 1  повертає значення правого операнда якщо лівий це null / undefined
+
+// console.log(null ?? undefined); // undefined
+
+// console.log(undefined ?? 10); // 10
+
+// console.log('' || false || 7); // 7 перше істинне
+
+// console.log(null || 2 || undefined); // 2 перше істинне далі не дивиться
+
+// console.log('' ?? 4); // ''
+
+//////////////-----------------------------------------МЕТОДИ ДЛЯ РОБОТИ З РЯДКАМИ-------------------------------------------
+
+// const str = 'Hello world';
+// console.log(str.length);
+// console.log(str.toLowerCase());
+// console.log(str.toUpperCase());
+// console.log(str.indexOf(' ')); //5 бо пробіл на пятому індексі
+// console.log(str.indexOf('H')); //0
+// console.log(str.includes('world')); // true  // перевіряє чи є така частина строки
+// console.log(str.endsWith(' world')); // true  "Чи цей рядок закінчується на ..."
+// console.log(str.startsWith('h')); //false  "Чи цей рядок починається на ..."
+// console.log(str.replace('H', 'h')); // hello
+// console.log(str.replaceAll('o', 'O')); // HellO wOrld // замінює всі букви
+// console.log(str.slice(0, str.length - 1)); // Hello worl // повертає якусь частину рядка від 0 тобто від початку і ленгс це всю довжину окрім останньої літери
+// console.log(str.slice(0, 3)); // Hel
+
+/// .padStart()  --- може доставити ті символи які потрібні '1'.padStart(2, '0') 2 -- довжина рядка, 0 - це число яке потрібно доставити // доставляє 0 на початок // == 01
+
+// .padEnd() --- '1'.padEnd(2, '0') === 10
+
 // ------------------------------------------------------------------------------------------ЗАДАЧИ--------------------------------------------------------
 
 // 1. Розрахувати iндекс маси тіла, необхідно вагу в кг розділити на квадрат висоти людини у метрах. Індекс маси тіла необхідно округлити до однієї цифри після коми
@@ -210,6 +294,7 @@
 //. 2. оператор нульового злиття ?? або дефолтне значення
 
 // ||  працює на 6 значень які повертають фолс
+// ??  працює на 6 значень які повертають фолс
 // ?? працює на 2 значення null undefined
 
 // const incomingValue = 5;
@@ -225,3 +310,19 @@
 // let test = 0;
 // const value_2 = test ?? 'some value'; // оскільки лет змінна не оголошена вона андефайнед, і оператор ?? обирає some value, тобто дані по замовчуванні // коли змінна лет оголошена і значення не нал і андефайнед то обирається числo користувала
 // console.log(value_2);
+
+//3. ГОДИНИ ЗАПИСАТИ РАЗОМ З ХВИЛИНАМИ X:X
+//70 = 01:10
+//450 = 07:30
+//1441 = 24:01
+
+// const totalMinutes = 1441;
+// const hours = Math.floor(totalMinutes / 60);
+// const minutes = totalMinutes % 60; // залишиться залишок хвилин, ті що не пішли в години // 1441/60 = години % - це залишок хвилин
+// console.log(hours);
+// console.log(minutes);
+// const result = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`; // to.string -- так як це число краще використати перетворення на рядок /// щоб у строці була строка
+// console.log(result);
+
+/// .padStart()  --- може доставити ті символи які потрібні '1'.padStart(2, '0') 2 -- довжина рядка, 0 - це число яке потрібно доставити // доставляє 0 на початок // == 01
+// .padEnd() --- '1'.padEnd(2, '0') === 10
