@@ -197,3 +197,27 @@
 // fruits[0] = 'plum';
 // fruits[3] = 'orange';
 // console.log(fruits[3]); //orange
+
+////////////////////////////////////////////////////ПОШУК ПО ІД////////////////////////////////////////
+
+// const fruitId = 3;
+// let fruit;
+// switch (fruitId) {
+//   case 1: // fruitId === 1 порівнює строго значення
+//     fruit = 'banana';
+//     break;
+//   case 2: // fruitId === 2
+//     fruit = 'peach';
+//     break;
+//   case 3: // fruitId === 3
+//     fruit = 'coconut';
+//     break;
+//   case 4: // fruitId === 4
+//     fruit = 'orange';
+//   default:
+//     console.log('Nothing found');
+// }
+// if (fruit) {
+//   // it is true because fruit it`s string
+//   console.log(fruit); // щоб не виводилося в консоль додатково андефінед то додали блок ИФ
+// }
