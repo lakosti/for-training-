@@ -221,3 +221,48 @@
 //   // it is true because fruit it`s string
 //   console.log(fruit); // щоб не виводилося в консоль додатково андефінед то додали блок ИФ
 // }
+
+/////////////////////////////////////МАСИВИ ТА ФУНКЦІЇ АВТОПЕРВІКА 2
+
+//1//
+
+// Оголошена функція splitMessage(message, delimiter)
+// Виклик splitMessage("Mango hurries to the train", " ") повертає ["Mango", "hurries", "to", "the", "train"]
+// Виклик splitMessage("Mango", "") повертає ["M", "a", "n", "g", "o"]
+// Виклик splitMessage("best_for_week", "_") повертає ["best", "for", "week"]
+
+// function splitMessage(message, delimiter) {
+//   let words;
+//   words = message.split(delimiter);
+//   return words;
+// }
+// console.log(splitMessage('Mango hurries to the train', ' '));
+// console.log(splitMessage('Mango', ''));
+// console.log(splitMessage('best_for_week', '_'));
+
+//2//
+
+// Напиши функцію getExtremeElements(array), яка приймає один параметр array - масив елементів довільної довжини. Функція повинна повертати масив з двох елементів - першого і останнього елемента параметра array.
+
+// Оголошена функція getExtremeElements(array)
+// Виклик getExtremeElements([1, 2, 3, 4, 5]) повертає [1, 5]
+// Виклик getExtremeElements(["Earth", "Mars", "Venus"]) повертає ["Earth", "Venus"]
+// Виклик getExtremeElements(["apple", "peach", "pear", "banana"]) повертає ["apple", "banana"]
+
+// Доповни код функції splitMessage(message, delimiter) таким чином, щоб вона повертала у змінній words результат поділу рядка message за роздільником delimiter - масив рядків.
+
+// function getExtremeElements(array) {
+//   if (array.length >= 2) {
+//     return [array[0], array[array.length - 1]];
+//   } else {
+//     // Якщо масив має менше двох елементів, повертаємо сам масив
+//     return array;
+//   }
+// }
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(['Earth', 'Mars', 'Venus']));
+// console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana']));
+
+//3//
+
+////4.

@@ -23,8 +23,8 @@
 // shift -- видаляє елементи на початку масиву
 // unsift -- додає елементи на початку масиву
 // splice -- додає видаляє заміняє будь який елемент масиву (універсальний)
-// slice -- створює копію масиву (рідко викорис) // (з якого, по який(не включно)) тобто
-//(1, 3)-- видалиться 1 і 2
+// slice -- створює копію масиву (рідко викорис) // (з якого, по який(не включно)) тобто //(1, 3)-- видалиться 1 і 2 // slice -вирізати все починаючи з x  і до останнього -1
+// concat -- поєднує декілька масивів в один
 
 ///////////////ЦИКЛИ для масиву
 
@@ -202,15 +202,15 @@
 
 ////////////////////////МЕТОДИ ЯКІ МУТУЮТЬ МАСИВ//////////////////
 
-// const arr = ['hello', 'world'];
-
 // push -- додає в кінці елемент масиву
 // pop -- видаляє останній елемент масиву
 // shift -- видаляє елементи на початку масиву
 // unsift -- додає елементи на початку масиву
 // splice -- додає видаляє заміняє елемент масиву (універсальний)
 // slice -- створює копію масиву (рідко викорис)
+// concat -- поєднує декілька масивів в один
 
+// const arr = ['hello', 'world'];
 // arr.push(1, 45, 14);
 
 // arr.pop(); // видалило 14 // скільки pop прописуємо скільки елементів і видаляє
@@ -236,7 +236,68 @@
 
 ////дізнатися по індексу і замінити той елемент
 
-const arr = ['hello', 'world', 'js'];
-const idx = arr.includes('world'); //1
-arr.splice(idx, 1, 'from'); // hello from js
-console.log(arr);
+// const arr = ['hello', 'world', 'js'];
+// const idx = arr.includes('world'); //1
+// const result = arr.splice(idx, 1, 'from'); // hello from js
+// console.log(arr);
+// console.log(result); //world  отримали те що вирізали
+
+/////////////////////
+
+// const arr = [1, 2, 3];
+// const arr1 = [4, 5];
+// const arr2 = [6, 7];
+// const result = arr.concat(arr2, arr1); //підключаємо у будь якому порядку
+// console.log(arr);
+// console.log(result);
+
+//////////////////////
+
+// document.body.id = 1;
+// console.log(typeof document.body.id); // typeof - string
+// console.log(document.body.id === 1); //false
+
+// input = 2;
+// console.log(typeof input); // number
+// console.log(input === 2); // true
+
+//////////////////////////////////
+
+// const array = ['Aple', 'mine', 'juice', 1, false];
+// console.log(array.slice(0, 3)); //'Aple', 'mine', 'juice'//копіює масив
+
+// const array = ['Aple', 'mine', 'juice', 1, false];
+// console.log(array.indexOf('mine')); //1 // шукає індекс по назві
+
+// const array = ['Aple', 'mine', 'juice', 1, false];
+// console.log(array.splice(0, 0, 'my')); // [] -- дужки пусті бо нічого не видалило лише додали my
+// console.log(array);
+
+// const array3 = [0];
+// const array = ['Aple', 'mine', 'juice', 1, false];
+// const array2 = [8, 2, 'yellow'];
+// const result = array.concat(array3, array2);
+// console.log(result);
+
+// .split('') --- перетворює з рядка в масив розбиваючи його роздільником
+// .join ('') --- обєднує елементи масиву у рядок
+// .revers() --- розвертає/повертає елементи / слова (те що було перше стане останнє і навпаки)
+
+// const result = [1, 2, 3, 4, 5];
+// const result = array.split(' ');
+// console.log(array);
+
+// let array = ['Hello', 'world'];
+// array = array.join(' ');
+// console.log(array);
+
+//повертає декілька елементи з масива
+
+// function getExtremeElements(array) {
+//   if (array.length >= 2) {
+//     return [array[0], array[array.length - 1]];
+//   } else {
+//     return array;
+//   }
+// }
+// console.log(getExtremeElements([1, 2, 3, 4, 5])); //1, 5
