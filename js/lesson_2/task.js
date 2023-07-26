@@ -120,3 +120,125 @@
 //   }
 // }
 // console.log(min);
+
+//////////////////ФУНКЦІЇ///////////////////////////////////////////////////////////////
+
+// Example 1 - Індекс маси тіла
+// Напиши функцію calcBMI(weight, height) яка розраховує та повертає індекс маси тіла людини. Для цього необхідно розділити вагу в кілограмах на квадрат висоти людини в метрах.
+// Вага та висота будуть спеціально передані як рядки. Не цілі числа можуть бути задані у вигляді 24.7 або 24,7, тобто як роздільник дробової частини може бути кома.
+// Індекс маси тіла необхідно округлити до однієї цифри після крапки;
+
+//// через змінні
+
+// let weight = '75,5'; // можуть прийти дані з бекенду де фізично не зможемо змінити на крапку
+// let height = '1.58';
+// weight = Number(weight.replace(',', '.')); //замінюємо кому на крапку // результат реплейсу (weight.replace) приводимо до числа ----- називається ченінг
+// height = Number(height);
+// // height = +height; // + також приводить до числа тобто заміняє написання Number лише коли один операнд (бінарний плюс)
+
+// // const bmi = weight / Math.pow(height, 2);
+// const bmi = Number((weight / height ** 2).toFixed(1)); // піднесення до степеня те саме що і в першому варіанті toFixed - повертає рядок, тобто ще додатково огоратємо в Намбер
+// console.log(bmi);
+
+//// через функцію
+
+// function calcBMI(weight, height) {
+//   weight = Number(weight.replace(',', '.'));
+//   height = Number(height.replace(',', '.')); // оскільки ми не знаємо який саме параметр прийде з комою, ми заміняємо обоє
+//   //   return weight / Math.pow(height, 2);
+//   return Number((weight / height ** 2).toFixed(1)); // ** - піднесення до степеня // to.Fixed -повернув рядок тому огортаємо в намбер
+// }
+// console.log(calcBMI('88,3', '1,75')); // number //28.8
+// // const bmi = calcBMI('88,3', '1.75');
+// // console.log(bmi);
+
+// Example 2 - Найменше з чисел
+// Напиши функцію min(a,b), яка повертає найменше з чисел a та b.
+
+//////приклад раннього повернення
+
+// function min(a, b) {
+//   //   if (a < b) {
+//   //     return a;
+//   //   }
+//   //   return b;
+//   return a < b ? a : b;
+// }
+// console.log(min(4, 8));
+// console.log(min(3, -1));
+// console.log(min(-10, 8));
+// console.log(min(5, 5));
+
+// Example 3 - Площа прямокутника
+// Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядка. Значення гарантовано розділені пробілом.
+
+// function getRectArea(demensions) {
+//   demensions = demensions.split(' ');
+//   const first = Number(demensions[0]);
+//   const last = Number(demensions[1]);
+//   //   console.log(first);
+//   //   console.log(last);
+//   return first * last;
+// }
+
+////////////////////скорочений запис//////////////////
+
+// function getRectArea(demensions) {
+//   demensions = demensions.split(' '); // розділили значення і перевели в масив
+//   return Number(demensions[0] * Number(demensions[1]));
+// }
+
+// console.log(getRectArea('8 11'));
+// console.log(getRectArea('46 11'));
+// console.log(getRectArea('8 112'));
+
+// Example 4 - Логування елементів
+// Напиши функцію logItems(items), яка отримує масив та використовує цикл for, який для кожного елемента масиву буде виводити в консоль повідомлення у форматі <номер елемента> - <значення елемента>. Нумерація елементів повинна починатися з 1.
+// Наприклад для першого елемента масиву ['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для індексу 2 - "Poly" виведе 3 - Ajax.
+
+// function logItems(items) {
+//   for (let i = 0, n = 1; i < items.length; i++, n++) {
+//     console.log(`${n} - ${items[i]}`);
+//   }
+// }
+// замість змінної  ${n} -- можна написати і + 1 = тобто індекс починається з нуля а порядковий номер з 1, тому ми компенсуємо цю різницю
+
+// logItems(['Mango', 'Poly', 'Alax']);
+// logItems(['apple', 'grapes', 'peach', 'banana', 'lemon']); //ця функція нічого не повертає, тому рітерн не обов'язковий
+
+// Example 5 - Логування контактів
+// Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність. Кількість імен та телефонів гарантовано однакова.
+
+function printContactInfo(names, phones) {
+  names = names.split(',');
+  phones = phones.split(',');
+  for (let i = 0; i < names.length, i < phones.length; i++) {
+    console.log(`${names[i]}, ${phones[i]}`);
+  }
+}
+printContactInfo('jacob, william, solomon, artemis', '1111111,2222222,333333,4444444');
+
+// let names = 'Jacob, William, Solomon, Artem';
+// let phones = '00000000000, 11111111111,22222222222';
+
+// names = names.split(','); //в умові розділяється по комі
+// phones = phones.split(',');
+// // за допомогою одного цикла перебирається два масива//
+// for (let i = 0; i < names.length, i < phones.length; i++) {
+//   console.log(`${names[i]} - ${phones[i]}`); // [i] -- ЛІЧИЛЬНИК ВІН ОБОВЯЗКОВИЙ - показує по черзі // i < names.length, i < phones.length --- подвійна умова на випадок якщо неоднакова кількість імен чи тел //обидві умови тру, якщо хоч одна фолс то цикл припиняється
+// }
+
+// Example 6 - Пошук найбільшого елемента
+// Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
+
+// Example 7 - Середнє значення
+// Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
+
+// Example 8 - Форматування часу
+// Напиши функцію formatTime(minutes) яка переведе значення minutes (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
+
+// Example 9 - Колекція курсів (includes, indexOf, push і т. д.)
+// Напишіть функції для роботи з колекцією навчальних курсів courses:
+// addCourse(name) - додає курс до кінця колекції
+// removeCourse(name) - видаляє курс із колекції
+// updateCourse(oldName, newName) - змінює ім'я на нове
