@@ -1,4 +1,29 @@
 // ЗАНЯТТЯ 1  ВСТУП---------------------------------------------------------------------------------------------------------
+//////////////-----------------------------------------МЕТОДИ ДЛЯ РОБОТИ З РЯДКАМИ-------------------------------------------
+
+// !!~courses.indexOf(course) ---- перевірка чи є цей елемент в переліку чи ні/// таке саме як courses.includes(course)
+// ~ -- називається бітвайс нот // bitwise not
+// console.log(!!~1);
+
+// const str = 'Hello world';
+// console.log(str.length);
+// console.log(str.toLowerCase());
+// console.log(str.toUpperCase());
+// console.log(str.indexOf(' ')); //5 бо пробіл на пятому індексі
+// console.log(str.indexOf('H')); //0
+// console.log(str.includes('world')); // true  // перевіряє чи є така частина строки
+// console.log(str.endsWith(' world')); // true  "Чи цей рядок закінчується на ..."
+// console.log(str.startsWith('h')); //false  "Чи цей рядок починається на ..."
+// console.log(str.replace('H', 'h')); // hello
+// console.log(str.replaceAll('o', 'O')); // HellO wOrld // замінює всі букви
+// console.log(str.slice(0, str.length - 1)); // Hello worl // повертає якусь частину рядка від 0 тобто від початку і ленгс це всю довжину окрім останньої літери
+// console.log(str.slice(0, 3)); // Hel
+
+/// .padStart()  --- може доставити ті символи які потрібні '1'.padStart(2, '0') 2 -- довжина рядка, 0 - це число яке потрібно доставити // доставляє 0 на початок // == 01 // додати нуль в часах
+// .padEnd() --- '1'.padEnd(2, '0') === 10
+//  toString() -- привведення до рядка
+//  return `${hours.toString()} : ${minutes}`; // приведення до рядка
+// використання .padStart() --- після приведення до рядка використовуємо метод ---  return `${hours.toString().padStart(2, '0')} : ${minutes.toString().padStart(2, '0')}`; // приведення до рядка
 
 // ////////////////// Cкорочені записи ///////////////////////
 // Boolean
@@ -191,6 +216,25 @@
 
 // console.log(5 > 4); //true
 
+// console.log(!!~1); //true
+
+// console.log(!!~-1); //false
+
+// console.log(~0); //-1
+
+// console.log(~-2); //1
+
+// console.log(~2); //-3
+
+// const arr = ['a', 'b', 'c'];
+// const idx = arr.indexOf('a');
+
+// console.log(!!-(idx + 1)); //true
+// console.log(!!~idx);//true
+// console.log(Boolean(~idx));//true
+
+//    - (x + 1);
+
 // console.log(10 >= '7'); //true відбувається приведення типів і порівнюється як звичайні символи
 
 // console.log('2' > '12'); //true порівнюється посимвольно тобто 2 > 1(2) / порівнюєтся по юнікоду 2 - 32 , 1 - 31
@@ -279,26 +323,6 @@
 // console.log(null || 2 || undefined); // 2 перше істинне далі не дивиться
 
 // console.log('' ?? 4); // ''
-
-//////////////-----------------------------------------МЕТОДИ ДЛЯ РОБОТИ З РЯДКАМИ-------------------------------------------
-
-// const str = 'Hello world';
-// console.log(str.length);
-// console.log(str.toLowerCase());
-// console.log(str.toUpperCase());
-// console.log(str.indexOf(' ')); //5 бо пробіл на пятому індексі
-// console.log(str.indexOf('H')); //0
-// console.log(str.includes('world')); // true  // перевіряє чи є така частина строки
-// console.log(str.endsWith(' world')); // true  "Чи цей рядок закінчується на ..."
-// console.log(str.startsWith('h')); //false  "Чи цей рядок починається на ..."
-// console.log(str.replace('H', 'h')); // hello
-// console.log(str.replaceAll('o', 'O')); // HellO wOrld // замінює всі букви
-// console.log(str.slice(0, str.length - 1)); // Hello worl // повертає якусь частину рядка від 0 тобто від початку і ленгс це всю довжину окрім останньої літери
-// console.log(str.slice(0, 3)); // Hel
-
-/// .padStart()  --- може доставити ті символи які потрібні '1'.padStart(2, '0') 2 -- довжина рядка, 0 - це число яке потрібно доставити // доставляє 0 на початок // == 01
-
-// .padEnd() --- '1'.padEnd(2, '0') === 10
 
 // --------------------------------ОБЛАСТІ ВИДИМОСТІ-----------------------------------------------------
 

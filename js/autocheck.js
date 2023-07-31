@@ -498,4 +498,123 @@
 // console.log(checkFruit('Pear'));
 // console.log(checkFruit('apple'));
 
-//
+//13. Спільними елементами масивів називають ті елементи, які присутні у всіх масивах.
+
+// Наприклад, у двох масивах [1, 3, 5] і [0, 8, 5, 3] спільними будуть числа 3 і 5, оскільки вони присутні в обох вихідних масивах. А числа 0, 1 і 8 присутні тільки в одному з масивів.
+
+// Напиши функцію getCommonElements(array1, array2), яка отримує два масиви довільної довжини в параметри array1 і array2, і повертає новий масив, що складається з тих елементів, які присутні в обох вихідних масивах.
+
+// function getCommonElements(array1, array2) {
+//   const result = [];
+//   for (const element of array1) {
+//     if (array2.includes(element)) {
+//       result.push(element);
+//     }
+//   }
+
+//   return result;
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+//13. Рефакторинг коду з цикла for в цикл for of (сума чисел)
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+
+//   // Change code above this line
+//   return total;
+// }
+
+//14. Напиши функцію getEvenNumbers(start, end), яка повертає масив усіх парних чисел від start до end. Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0).
+
+// Оголошена функція getEvenNumbers(start, end)
+// Виклик функції getEvenNumbers(2, 5) повертає [2, 4]
+// Виклик функції getEvenNumbers(3, 11) повертає [4, 6, 8, 10]
+// Виклик функції getEvenNumbers(6, 12) повертає [6, 8, 10, 12]
+// Виклик функції getEvenNumbers(8, 8) повертає [8]
+// Виклик функції getEvenNumbers(7, 7) повертає []
+// Виклик функції getEvenNumbers() з випадковими start і end повертає правильний масив
+
+// function getEvenNumbers(start, end) {
+//   const result = [];
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//       result.push(i);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(getEvenNumbers(2, 5)); // [2, 4]
+// console.log(getEvenNumbers(3, 11)); // [4, 6, 8, 10]
+// console.log(getEvenNumbers(6, 12)); // [6, 8, 10, 12]
+// console.log(getEvenNumbers(8, 8)); // [8]
+// console.log(getEvenNumbers(7, 7)); // []
+
+//15. Доповни код таким чином, щоб у змінну number записувалося перше число від start до end, яке ділиться на 5 без остачі.
+
+// Оголошена змінна start зі значенням 6
+// Оголошена змінна end зі значенням 27
+// Оголошена змінна number без ініціалізації
+// Підсумкове значення змінної number дорівнює 10
+// В циклі for використовується break для виходу до завершення усіх ітерацій циклу
+
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+
+//16 Виконай рефакторинг функції findNumber(start, end, divisor) таким чином, щоб вона:
+
+// повертала перше число від start до end, яке ділиться на divisor без остачі
+// не використала оператор break
+// не використала змінну number
+
+// function findNumber(start, end, divisor) {
+//   // Change code below this line
+//   let number;
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+
+//   return number;
+//   // Change code above this line
+// }
+
+// Якщо цикл знаходиться в тілі функції, то оператор break не припиняє виконання функції, а тільки перерве цикл. Для того щоб переривати виконання відразу циклу і функції, є оператор return.
+
+//17. Напиши функцію includes(array, value), яка робить те саме, що і метод масиву масив.includes(значення) - перевіряє, чи присутнє в масиві array значення value, повертаючи true, якщо присутнє, і false в іншому випадку.
+
+// При виконанні цього завдання в тілі функції includes() не можна використовувати метод масив.includes(значення). // перевірка включеності без інклуд
+
+// Оголошена функція includes(array, value)
+// Виклик includes([1, 2, 3, 4, 5], 3) повертає true
+// Виклик includes([1, 2, 3, 4, 5], 17) повертає false
+// Виклик includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") повертає true
+
+// function includes(array, value) {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
